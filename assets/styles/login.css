@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#E53945, #ffffff);
+}
+
+html, body {
+    overflow-x: hidden; /* Hilangkan scroll horizontal */
+}
+
+.login-page{
+    display: flex;
+}
+
+.banner-image img{
+    width: 420px;
+    height: 500px;
+    margin: 32px 50px 0 0;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.login-container{
+    margin-top: 30px;
+    width: 533px;
+}
+
+.daftar-button{
+    text-align: end;
+    color: #E53945;
+    font-size: 20;
+    font-weight: 700;
+}
+
+.wrapper h1{
+    color: #ffffff;
+    font-size: 48;
+    font-weight: 700;
+}
+
+.wrapper h2{
+    color: #ffffff;
+    font-size: 40;
+    font-weight: 700;
+}
+
+.wrapper p{
+    color: #ffffff;
+    font-size: 20;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.wrapper a{
+    color: #38A1FF;
+    font-size: 20;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.input-email label{
+    color: #ffffff;
+    font-size: 24;
+    font-weight: 500;
+}
+
+.input-email i{
+    width: 25px;
+    height: 21px;
+}
+
+.input-email input{
+    margin-top: 8px;
+}
+
+.input-password label{
+    color: #ffffff;
+    font-size: 24;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.input-password i{
+    width: 25px;
+    height: 21px;
+}
+
+.input-password input{
+    margin-top: 8px;
+}
+
+.button{
+    margin-top: 12px;
+    text-align: center;
+    font-size: 20;
+    font-weight: 700;
+}
+
+.atau{
+    margin-top: 12px;
+}
+
+.atau p{
+    color: #ffffff;
+    font-size: 20;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.login-facebook{
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .login-page {
+        flex-direction: column; /* Susun elemen secara vertikal */
+        align-items: center;
+
+    }
+
+    .banner-image img {
+        width: 100%; /* Gambar menyesuaikan lebar layar */
+        height: 580px; /* Tinggi otomatis untuk menjaga proporsi */
+        margin: 20px 0 20px 0; /* Tambahkan margin bawah */
+    }
+
+    .login-container {
+        width: 100%; /* Lebar 100% untuk menyesuaikan layar */
+        margin-top: 0; /* Hapus margin atas */
+    }
+
+    .wrapper {
+        padding: 0; /* Hapus padding tambahan */
+        margin: 0 auto; /* Pusatkan */
+    }
+
+    .wrapper h1 {
+        font-size: 36px; /* Ukuran font lebih kecil */
+    }
+
+    .wrapper h2 {
+        font-size: 28px; /* Ukuran font lebih kecil */
+    }
+
+    .wrapper p {
+        font-size: 16px; /* Ukuran font lebih kecil */
+    }
+
+    .input-email label,
+    .input-password label {
+        font-size: 18px; /* Ukuran font lebih kecil */
+    }
+
+    .button button {
+        width: 100%; /* Tombol memenuhi lebar */
+    }
+
+    .atau p {
+        font-size: 16px; /* Ukuran font lebih kecil */
+    }
+
+    .login-google button,
+    .login-facebook button {
+        font-size: 14px; /* Ukuran teks tombol lebih kecil */
+        padding: 10px;
+    }
+
+    .login-google img,
+    .login-facebook img {
+        width: 16px; /* Logo lebih kecil */
+    }
+}
+
+
+
+
+
+
+
+
+
