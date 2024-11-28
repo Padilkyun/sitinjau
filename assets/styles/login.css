@@ -40,6 +40,9 @@ html, body {
 
 .daftar-button{
     text-align: end;
+}
+
+.daftar-button button{
     color: #E53945;
     font-size: 20;
     font-weight: 700;
@@ -77,9 +80,10 @@ html, body {
     font-weight: 500;
 }
 
-.input-email i{
+.input-email svg{
     width: 25px;
     height: 21px;
+    color: #ffffff;
 }
 
 .input-email input{
@@ -93,9 +97,10 @@ html, body {
     margin-top: 10px;
 }
 
-.input-password i{
+.input-password svg{
     width: 25px;
     height: 21px;
+    color: #ffffff;
 }
 
 .input-password input{
@@ -120,9 +125,14 @@ html, body {
     text-align: center;
 }
 
+.login-google{
+    margin-top: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);;
+}
 
 .login-facebook{
     margin-top: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Modern+Antiqua&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#E53945, #ffffff);
+}
+
+.daftar-page{
+    margin-top: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo-image img{
+    width: 95px;
+    height: 83px;
+    box-shadow: ;
+}
+
+.logo h1{
+    margin-top: 10px;
+    font-family: "Modern Antiqua";
+    font-size: 26px;
+    font-weight: 400;
+    color: #ffffff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.daftar-card{
+    width: 800px;
+    height: 780px;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 36px 63px 36px 50px;
+}
+
+.nama, .tempat-lahir, .tanggal-lahir, .daerah, .umur{
+    margin-bottom: 20px;
+}
+
+.input-data label{
+    margin-bottom: 16px;
+    font-size: 16px;
+    text-align: left;
+    color: #000;
+}
+
+.input-data input{
+    font-size: 16px;
+    border-radius: 50px;
+    border: solid 1px #ff7979;
+    background-image: linear-gradient(to right, #fff, #fd8b93);
+}
+
+.tanggal-lahir button{
+    border-radius: 50px;
+    background-color: #fd8b93;
+    color: #ffffff;
+}
+
+.daftar-button{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.daftar-button button{
+    border-radius: 12px;
+    font-size: 20;
+    font-weight: 700;
+}
+
+.atau {
+    display: flex; /* Membuat elemen anak diatur sejajar secara horizontal */
+    align-items: center; /* Menjaga semua elemen sejajar secara vertikal */
+    gap: 10px; /* Jarak antara garis dan teks */
+    color: #E53945;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.atau hr {
+    border: none; /* Menghilangkan border default dari <hr> */
+    height: 1px; /* Ketebalan garis */
+    background-color: #E53945; /* Warna garis */
+    margin-top: 2px;
+    width: 21%;
+}
+
+.daftar-lain{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.google-button button{
+    border-radius: 12px;
+    font-weight: 600;
+    width: 170px;
+    align-items: center;
+}
+
+.facebook-button button{
+    border-radius: 12px;
+    font-weight: 600;
+    width: 170px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
