@@ -201,6 +201,55 @@ header{
     padding: 14px 39px 19px 30px;
 }
 
+.start-post .modal-content {
+    border-radius: 10px;
+}
+
+.start-post .modal-header {
+    border-bottom: none;
+    display: flex;
+}
+
+.start-post .modal-body svg{
+    width: 40px;
+    height: 32px;
+}
+
+.start-post .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn-file {
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+.btn-file:hover {
+    color: #000;
+}
+
+.btn-post {
+    background-color: #E53945;
+    color: white;
+}
+
+.btn-post:hover {
+    background-color: #E53945;
+    color: #fffs;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 15px 0;
+}
+
 .post-input{
     display: flex;
 }
@@ -210,6 +259,17 @@ header{
     height: 55px;
     border: solid 1px #535353;
     border-radius: 50%;
+}
+
+.post-input button{
+    margin-top: 10px;
+    width: 400px;
+    height: 36px;
+    border-radius: 18px;
+    border: solid 1px #535353;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 40px;
 }
 
 .input-custom input{

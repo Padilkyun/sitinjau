@@ -31,7 +31,7 @@
                             </svg>Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"><svg class="caleg-lain-icon" xmlns="http://www.w3.org/2000/svg"
+                        <a class="nav-link" href="calegLain.html"><svg class="caleg-lain-icon" xmlns="http://www.w3.org/2000/svg"
                                 width="1em" height="1em" viewBox="0 0 56 56">
                                 <path fill="#ffffff"
                                     d="M38.723 28.549c4.417 0 8.217-3.944 8.217-9.08c0-5.074-3.82-8.833-8.217-8.833c-4.396 0-8.217 3.841-8.217 8.874c0 5.095 3.8 9.039 8.217 9.039m-23.645.473c3.821 0 7.15-3.452 7.15-7.91c0-4.416-3.35-7.683-7.15-7.683c-3.82 0-7.19 3.349-7.169 7.725c0 4.416 3.328 7.868 7.17 7.868M3.616 47.572h15.612c-2.136-3.102.473-9.347 4.89-12.757c-2.28-1.52-5.219-2.65-9.06-2.65C5.793 32.164 0 39.004 0 44.695c0 1.85 1.027 2.877 3.616 2.877m22.186 0h25.822c3.225 0 4.376-.925 4.376-2.733c0-5.3-6.636-12.613-17.297-12.613c-10.641 0-17.277 7.313-17.277 12.614c0 1.807 1.15 2.732 4.376 2.732" />
@@ -91,8 +91,13 @@
                 </div>-->
                 <div class="images">
                     <div class="profile-image">
-                        <label for="input-file"><img src="assets/img/profile-picture.webp" id="profile-pic"></label>
-                        <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+                        <img src="assets/img/profile-picture.webp" id="profile-pic">
+                    </div>
+                    <div class="connections">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4" />
+                        </svg>
+                        <p>90 Connections</p>
                     </div>
                     <div class="partai">
                         <img src="assets/img/nasdem.png" alt="">
@@ -105,17 +110,161 @@
                     <p>Padang, Sumatera Barat</p>
                 </div>
                 <div class="profile-button">
-                    <button type="button" class="btn btn-outline-dark">Enhance profil</button>
+                    <button type="button" class="btn btn-outline-dark" data-toggle="modal"
+                    data-target="#editProfileModal">Enhance profile</button>
                 </div>
+
+                <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editProfileLabel">Edit Profil</h5>
+                                <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <hr>
+                            <div class="modal-body">
+                                <!-- Profile Photo Upload -->
+                                <div class="profile-photo position-relative">
+                                    <label for="profileUpload"><img id="profileImage" src="assets/img/profile-picture.webp" alt="Profile"></label>
+                                    <input type="file" id="profileUpload" class="d-none" accept="image/jpeg, image/png, image/jpg"
+                                        onchange="previewProfileImage(event)">
+                                        <h1>Tambahkan Foto Profil</h1>
+                                </div>
+                                <!-- Form -->
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="firstName" class="form-label">Nama depan*</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="lastName" class="form-label">Nama belakang</label>
+                                        <input type="text" class="form-control" id="lastName">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="caleg" class="form-label">Caleg*</label>
+                                        <input type="text" class="form-control" id="caleg" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="city" class="form-label">Kota*</label>
+                                        <input type="text" class="form-control" id="city" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="province" class="form-label">Provinsi*</label>
+                                        <input type="text" class="form-control" id="province" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="party" class="form-label">Partai*</label>
+                                        <select class="form-select" id="party" required>
+                                            <option value="">Pilih Partai</option>
+                                            <option value="partai1">Partai 1</option>
+                                            <option value="partai2">Partai 2</option>
+                                            <option value="partai3">Partai 3</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="experience">
                 <div class="experience-header">
                     <div class="experience-title">
                         <h1>Experience</h1>
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <svg data-toggle="modal"
+                        data-target="#addExperienceModal" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill="currentColor"
                                     d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0m1.062 4.312a1 1 0 1 0-2 0v2.75h-2.75a1 1 0 0 0 0 2h2.75v2.75a1 1 0 1 0 2 0v-2.75h2.75a1 1 0 1 0 0-2h-2.75Z" />
-                            </svg></a>
+                        </svg>
+
+                        <div class="modal fade" id="addExperienceModal" tabindex="-1" aria-labelledby="addExperienceModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header bg-danger text-white">
+                                        <h5 class="modal-title" id="addExperienceModalLabel">Add Experience</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                    
+                                    <!-- Modal Body -->
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="title" class="form-label">Judul*</label>
+                                                <input type="text" class="form-control" id="title" placeholder="Masukkan Judul" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="company" class="form-label">Perusahaan atau Organisasi*</label>
+                                                <input type="text" class="form-control" id="company" placeholder="Masukkan Perusahaan atau Organisasi" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="employmentType" class="form-label">Jabatan</label>
+                                                <input type="text" class="form-control" id="employmentType" placeholder="Masukkan Jabatan">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="location" class="form-label">Lokasi</label>
+                                                <input type="text" class="form-control" id="location" placeholder="Masukkan Lokasi">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="startDate" class="form-label">Tahun Mulai*</label>
+                                                    <div class="d-flex gap-2">
+                                                        <select class="form-select" id="startMonth" required>
+                                                            <option selected disabled>Bulan</option>
+                                                            <option>January</option>
+                                                            <option>February</option>
+                                                            <option>March</option>
+                                                            <!-- Add other months -->
+                                                        </select>
+                                                        <select class="form-select" id="startYear" required>
+                                                            <option selected disabled>Tahun</option>
+                                                            <option>2023</option>
+                                                            <option>2022</option>
+                                                            <option>2021</option>
+                                                            <!-- Add other years -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="expiryDate" class="form-label">Tahun Berakhir*</label>
+                                                    <div class="d-flex gap-2">
+                                                        <select class="form-select" id="expiryMonth" required>
+                                                            <option selected disabled>Month</option>
+                                                            <option>January</option>
+                                                            <option>February</option>
+                                                            <option>March</option>
+                                                            <!-- Add other months -->
+                                                        </select>
+                                                        <select class="form-select" id="expiryYear" required>
+                                                            <option selected disabled>Year</option>
+                                                            <option>2023</option>
+                                                            <option>2022</option>
+                                                            <option>2021</option>
+                                                            <!-- Add other years -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3">
+                                                <label for="description" class="form-label">Deskripsi</label>
+                                                <textarea class="form-control" id="description" rows="3" placeholder="Masukkan Deskripsi"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                    
+                                    <!-- Modal Footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>
+                                        <button type="button" class="btn btn-danger">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <p>Tambahkan pengalaman kamu yang relevan untuk memperkuat citra sebagai calon legislatif yang
                         kompeten. Ceritakan bagaimana kamu pernah memimpin organisasi, mengelola program masyarakat,
@@ -171,10 +320,110 @@
                 <div class="pendidikan-header">
                     <div class="pendidikan-title">
                         <h1>Pendidikan</h1>
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <svg data-toggle="modal"
+                        data-target="#addEducationModal" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                 <path fill="currentColor"
                                     d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0m1.062 4.312a1 1 0 1 0-2 0v2.75h-2.75a1 1 0 0 0 0 2h2.75v2.75a1 1 0 1 0 2 0v-2.75h2.75a1 1 0 1 0 0-2h-2.75Z" />
-                            </svg></a>
+                        </svg>
+                        
+                        <div class="modal fade" id="addEducationModal" tabindex="-1" aria-labelledby="addEducationLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="addEducationLabel">Add pendidikan</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Form -->
+                                        <form>
+                                            <div class="mb-3">
+                                                <label class="form-label">Tingkat Pendidikan*</label>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="educationLevel" id="smp" value="SMP" required>
+                                                    <label class="form-check-label" for="smp">SMP</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="educationLevel" id="sma" value="SMA">
+                                                    <label class="form-check-label" for="sma">SMA</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="educationLevel" id="universitas" value="Universitas">
+                                                    <label class="form-check-label" for="universitas">Universitas</label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="schoolName" class="form-label">Nama*</label>
+                                                <input type="text" class="form-control" id="schoolName" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="degree" class="form-label">Gelar</label>
+                                                <input type="text" class="form-control" id="degree">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="major" class="form-label">Jurusan</label>
+                                                <input type="text" class="form-control" id="major">
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="current">
+                                                <label class="form-check-label" for="current">Current</label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="startDate" class="form-label">Start date*</label>
+                                                    <div class="row g-2">
+                                                        <div class="col">
+                                                            <select class="form-select" id="startMonth" required>
+                                                                <option value="">Month</option>
+                                                                <option value="1">January</option>
+                                                                <option value="2">February</option>
+                                                                <option value="3">March</option>
+                                                                <!-- Add other months -->
+                                                            </select>
+                                                        </div>
+                                                        <div class="col">
+                                                            <select class="form-select" id="startYear" required>
+                                                                <option value="">Year</option>
+                                                                <option value="2023">2023</option>
+                                                                <option value="2022">2022</option>
+                                                                <option value="2021">2021</option>
+                                                                <!-- Add other years -->
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="expiryDate" class="form-label">Expiry date*</label>
+                                                    <div class="row g-2">
+                                                        <div class="col">
+                                                            <select class="form-select" id="endMonth" required>
+                                                                <option value="">Month</option>
+                                                                <option value="1">January</option>
+                                                                <option value="2">February</option>
+                                                                <option value="3">March</option>
+                                                                <!-- Add other months -->
+                                                            </select>
+                                                        </div>
+                                                        <div class="col">
+                                                            <select class="form-select" id="endYear" required>
+                                                                <option value="">Year</option>
+                                                                <option value="2023">2023</option>
+                                                                <option value="2022">2022</option>
+                                                                <option value="2021">2021</option>
+                                                                <!-- Add other years -->
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-save" data-bs-dismiss="modal">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+
                     </div>
                     <p>Tambahkan pendidikanmu dengan latar belakang yang relevan untuk mendukung peranmu sebagai calon
                         legislatif, seperti gelar dalam Ilmu Politik, Hukum, Administrasi Publik, atau bidang lain yang
@@ -209,38 +458,53 @@
                     <div class="activity-title">
                         <h1>Activity</h1>
                         <button type="button" class="create-post btn btn-outline-dark" data-toggle="modal"
-                            data-target="#exampleModal" data-whatever="@mdo">Create a Post</button>
+                            data-target="#postModal" data-whatever="@mdo">Create a Post</button>
 
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                <input type="text" class="form-control" id="recipient-name">
+                            <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <img src="assets/img/profile-picture.webp" alt="Profile" class="profile-picture me-3">
+                                            <h5 class="modal-title" id="postModalLabel">Haryono, S.Sos</h5>
+                                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Profile Section -->
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div>
+                                                    <p class="mb-0">Posting ke</p>
+                                                    <select class="form-select form-select-sm" aria-label="Posting visibility">
+                                                        <option value="public" selected>Semua orang</option>
+                                                        <option value="friends">Koneksi</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="message-text" class="col-form-label">Message:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
+                        
+                                            <!-- Text Input -->
+                                            <textarea class="form-control mb-3" rows="4" placeholder="Ceritakan aktivitasmu!" style="resize: none;"></textarea>
+                        
+                                            <!-- Divider -->
+                                            <div class="divider"></div>
+                        
+                                            <!-- Media Upload Buttons -->
+                                            <div class="d-flex justify-content-start">
+                                                <label class="btn-file">
+                                                    <input type="file" id="imageUpload" style="display: none;" accept="image/*">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                        <path fill="currentColor" d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3M5 18a1 1 0 0 1-1-1v-2.42l3.3-3.29a1 1 0 0 1 1.4 0L15.41 18Zm15-1a1 1 0 0 1-1 1h-.77l-3.81-3.83l.88-.88a1 1 0 0 1 1.4 0l3.3 3.29Zm0-3.24l-1.88-1.87a3.06 3.06 0 0 0-4.24 0l-.88.88l-2.88-2.88a3.06 3.06 0 0 0-4.24 0L4 11.76V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1Z" />
+                                                    </svg>
+                                                </label>
                                             </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Send message</button>
+                                        </div>
+                        
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Batal</button>
+                                            <button type="button" class="btn btn-post">Posting</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+        
 
                     </div>
                     <div class="activity-button">
@@ -354,6 +618,7 @@
             </div>
         </aside>
     </main>
+    <script src="assets/js/preview.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -364,7 +629,6 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <script src="assets/js/changeProfile.js"></script>
     <script src="assets/js/like.js"></script>
 </body>
 

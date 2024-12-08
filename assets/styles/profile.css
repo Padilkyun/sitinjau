@@ -150,17 +150,33 @@ header {
     height: 100px;
     border: solid 1px #535353;
     border-radius: 50%;
-    cursor: pointer;
 }
 
-.profile-image input {
-    display: none;
+.connections{
+    width: 180px;
+    margin-left: 22px;
+    align-items: center;
+    display: flex;
+}
+
+.connections svg{
+    width: 22px;
+    height: 22px;
+    color: #D51321;
+}
+
+.connections p{
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
 }
 
 .partai {
     display: flex;
-    align-items: flex-end;
-    margin-left: 410px;
+    align-items: center;
+    margin-left: 250px;
+    margin-right: 70px;
 }
 
 .partai p {
@@ -211,6 +227,37 @@ header {
     margin-left: 65px;
 }
 
+.profile .modal-header {
+    border-bottom: none;
+}
+
+.profile .modal-footer {
+    border-top: none;
+}
+
+.profile-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.profile-photo label {
+    cursor: pointer;
+}
+
+.profile-photo h1{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
 .experience {
     width: 900px;
     height: 360px;
@@ -243,6 +290,7 @@ header {
     height: 20px;
     margin-bottom: 8px;
     margin-left: 28px;
+    cursor: pointer;
 }
 
 .experience-header p {
@@ -336,6 +384,40 @@ header {
     height: 20px;
     margin-bottom: 8px;
     margin-left: 28px;
+    cursor: pointer;
+}
+
+.pendidikan-title .modal-content {
+    border-radius: 10px;
+}
+
+.pendidikan-title .modal-header {
+    border-bottom: none;
+    background-color: #E53945;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pendidikan-title .modal-footer {
+    border-top: none;
+}
+
+.pendidikan-title .form-check-input:checked {
+    background-color: #E53945;
+    border-color: #E53945
+}
+
+.pendidikan-title .btn-save {
+    background-color: #E53945;
+    border-color: #E53945;
+    color: #fff;
+}
+
+.pendidikan-title .btn-save:hover {
+    background-color: #b02727;
+    border-color: #b02727;
+    color: #fff;
 }
 
 .pendidikan-header p {
@@ -418,6 +500,55 @@ header {
     border: solid 1px #535353;
     font-size: 16px;
     font-weight: 400;
+}
+
+.activity-title .modal-content {
+    border-radius: 10px;
+}
+
+.activity-title .modal-header {
+    border-bottom: none;
+    display: flex;
+}
+
+.activity-title .modal-body svg{
+    width: 40px;
+    height: 32px;
+}
+
+.activity-title .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.activity-title .btn-file {
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+.activity-title .btn-file:hover {
+    color: #000;
+}
+
+.activity-title .btn-post {
+    background-color: #E53945;
+    color: white;
+}
+
+.activity-title .btn-post:hover {
+    background-color: #E53945;
+    color: #fffs;
+}
+
+.activity-title .divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 15px 0;
 }
 
 .activity-button{
@@ -618,7 +749,7 @@ header {
 
 .connection h1{
     font-size: 20px;
-    font-weight: 500px;
+    font-weight: 500;
     text-align: center;
     margin-top: 50%;
 }
@@ -641,13 +772,13 @@ header {
 
 .people-header h1{
     font-size: 16px;
-    font-weight: 600px;
+    font-weight: 600;
     color: #535353;
 }
 
 .people-header p{
     font-size: 14px;
-    font-weight: 400px;
+    font-weight: 400;
     color: #898787;
 }
 
@@ -671,13 +802,13 @@ header {
 
 .nama h2{
     font-size: 14px;
-    font-weight: 700px;
+    font-weight: 700;
     color: #535353;
 }
 
 .nama p{
     font-size: 14px;
-    font-weight: 500px;
+    font-weight: 500;
     color: #535353;
 }
 
@@ -711,13 +842,13 @@ header {
 
 .nama h2{
     font-size: 14px;
-    font-weight: 700px;
+    font-weight: 700;
     color: #535353;
 }
 
 .nama p{
     font-size: 14px;
-    font-weight: 500px;
+    font-weight: 500;
     color: #535353;
 }
 
