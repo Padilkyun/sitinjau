@@ -98,6 +98,58 @@ header{
     height: 26px;
 }
 
+.notification-item {
+    display: flex; /* Mengatur layout menjadi fleksibel */
+    gap: 10px; /* Memberikan jarak antar elemen */
+    padding: 10px; /* Memberikan padding pada setiap item */
+    border-bottom: 1px solid #e9ecef; /* Garis pemisah antar item */
+  }
+
+  /* Menghapus garis pemisah pada item terakhir */
+  .notification-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Gambar profil dalam notifikasi */
+  .notification-item img {
+    width: 40px; /* Lebar gambar */
+    height: 40px; /* Tinggi gambar */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+  }
+
+  /* Mengatur teks pada notifikasi */
+  .notification-text {
+    flex: 1; /* Mengisi ruang yang tersisa */
+  }
+
+  /* Tombol aksi (Deny dan Allow) */
+  .notification-actions {
+    display: flex; /* Mengatur tombol menjadi fleksibel */
+    justify-content: space-between; /* Memberikan jarak antara tombol */
+    align-items: center; /* Menyelaraskan tombol secara vertikal */
+    padding: 10px; /* Memberikan padding */
+  }
+
+  /* Menambahkan jarak antar tombol aksi */
+  .notification-actions button {
+    margin: 0 5px;
+  }
+
+  /* Header notifikasi */
+  .notification-header {
+    display: flex; /* Mengatur layout header menjadi fleksibel */
+    justify-content: space-between; /* Membagi ruang antara dua elemen */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    padding: 10px; /* Memberikan padding */
+    border-bottom: 1px solid #e9ecef; /* Garis bawah header */
+  }
+
+  /* Styling untuk tombol "Mark all as read" */
+  .notification-header .mark-read {
+    color: #007bff; /* Warna biru */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+  }
+
 .bantuan-icon{
     width: 28px;
     height: 26px;
@@ -707,6 +759,148 @@ header{
     color: #FFC107;
 }
 
-
+/* Media Query untuk layar dengan lebar maksimal 768px */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        width: 100%;
+    }
+    /* Header dan Navbar */
+    .navbar-custom {
+      padding-left: 20px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-brand img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .search-custom {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  
+    .navlist-custom {
+      margin-left: 0;
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .navlist-custom li {
+      margin: 5px;
+      flex: 1 1 auto;
+      text-align: center;
+    }
+  
+    /* Profile Card */
+    .profile-card {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      justify-content: center;
+      justify-items: center;
+    }
+  
+    .profile-image img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .profile-info h1 {
+      font-size: 18px;
+    }
+  
+    .profile-info h2 {
+      font-size: 14px;
+    }
+  
+    /* Middle Content */
+    .middle-content {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .start-post {
+      width: 100%;
+    }
+  
+    .recommended-card,
+    .feed-card {
+      width: 100%;
+    }
+  
+    /* List Recommended */
+    .list a {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .list .ikuti-button button {
+      margin-left: auto;
+    }
+  
+    /* Feed Card */
+    .reaction {
+      width: 100%;
+    }
+  
+    /* Berita Card */
+    .berita-card {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      margin-top: 20px;
+      order: 1;
+    }
+  
+    .list-berita {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .judul-berita a {
+      font-size: 12px;
+    }
+  
+    /* General Styling */
+    .container {
+      flex-direction: column;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  
+    .content {
+      flex-direction: column;
+    }
+  
+    .post-input img {
+      width: 45px;
+      height: 45px;
+    }
+  
+    .post-input button {
+      width: 80%;
+      margin-left: 10%;
+    }
+  
+    .post-button a {
+      font-size: 14px;
+    }
+  
+    .recommended-list hr {
+      margin-top: 10px;
+    }
+  
+    .lihat-selengkapnya a {
+      font-size: 14px;
+    }
+  }
+  
 
 
