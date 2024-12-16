@@ -98,6 +98,58 @@ header {
     height: 26px;
 }
 
+.notification-item {
+    display: flex; /* Mengatur layout menjadi fleksibel */
+    gap: 10px; /* Memberikan jarak antar elemen */
+    padding: 10px; /* Memberikan padding pada setiap item */
+    border-bottom: 1px solid #e9ecef; /* Garis pemisah antar item */
+  }
+
+  /* Menghapus garis pemisah pada item terakhir */
+  .notification-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Gambar profil dalam notifikasi */
+  .notification-item img {
+    width: 40px; /* Lebar gambar */
+    height: 40px; /* Tinggi gambar */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+  }
+
+  /* Mengatur teks pada notifikasi */
+  .notification-text {
+    flex: 1; /* Mengisi ruang yang tersisa */
+  }
+
+  /* Tombol aksi (Deny dan Allow) */
+  .notification-actions {
+    display: flex; /* Mengatur tombol menjadi fleksibel */
+    justify-content: space-between; /* Memberikan jarak antara tombol */
+    align-items: center; /* Menyelaraskan tombol secara vertikal */
+    padding: 10px; /* Memberikan padding */
+  }
+
+  /* Menambahkan jarak antar tombol aksi */
+  .notification-actions button {
+    margin: 0 5px;
+  }
+
+  /* Header notifikasi */
+  .notification-header {
+    display: flex; /* Mengatur layout header menjadi fleksibel */
+    justify-content: space-between; /* Membagi ruang antara dua elemen */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    padding: 10px; /* Memberikan padding */
+    border-bottom: 1px solid #e9ecef; /* Garis bawah header */
+  }
+
+  /* Styling untuk tombol "Mark all as read" */
+  .notification-header .mark-read {
+    color: #007bff; /* Warna biru */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+  }
+
 .bantuan-icon {
     width: 28px;
     height: 26px;
@@ -124,6 +176,7 @@ header {
     background-position: center; /* Memusatkan gambar */
     display: flex;
     height: 180px;
+    margin-top: 90px;
 }
 
 .jumbotron-title{
