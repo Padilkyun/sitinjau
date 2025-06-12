@@ -15,18 +15,27 @@ class User extends Authenticatable
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $fillable = [
-        'name',
-        'email',
+        'username',
         'password',
+        'partai_id',
+        'birth_place',
+        'origin_area',
+        'poto',
+        'dapil',
+        'age'
     ];
+    public function partai()
+    {
+        return $this->belongsTo(Partai::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $hidden = [
         'password',
@@ -38,11 +47,27 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    protected function casts(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
-    }
+
+     public function posts()
+     {
+         return $this->hasMany(Post::class); // A user can have many posts
+     }
+
+     // User.php
+public function follows()
+{
+    return $this->belongsToMany(User::class, 'follows', 'follower_id', 'followed_id');
+}
+
+public function followings()
+{
+    return $this->follows(); // Alias for readability
+}
+
+public function followers()
+{
+    return $this->belongsToMany(User::class, 'follows', 'followed_id', 'follower_id');
+}
+
+
 }

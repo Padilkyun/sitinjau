@@ -1,0 +1,906 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f2ee;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    padding: 2px 0 6px;
+    background-image: linear-gradient(to right, #e53945, #7f2026);
+}
+
+.navbar-custom {
+    background-image: linear-gradient(to right, #e53945, #7f2026);
+    padding-left: 63px;
+    height: 80px;
+}
+
+.navbar-custom{
+    color: white;
+}
+
+.nav-link{
+    color: white;
+}
+
+.navbar-brand{
+    margin-right: 10px;
+}
+
+.navbar-brand img{
+    width: 73px;
+    height: 65px;
+    margin-top: 3;
+    margin-bottom: 10px;
+}
+
+.nav-link:hover{
+    color: #FFC107;
+}
+
+.search-custom{
+    width: 320px;
+    height: 38px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.navlist-custom{
+    margin-top: 4px;
+    margin-left: 200px;
+}
+
+.navlist-custom li{
+    margin-left: 10px;
+    justify-items: center;
+}
+
+.navlist-custom li a{
+    object-fit: contain;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+
+.home-icon{
+    width: 28px;
+    height: 26px;
+    color: #ffffff;
+}
+
+.caleg-lain-icon{
+    width: 28px;
+    height: 26px;
+}
+
+.notifikasi-icon{
+    width: 28px;
+    height: 26px;
+}
+
+.notification-item {
+    display: flex; /* Mengatur layout menjadi fleksibel */
+    gap: 10px; /* Memberikan jarak antar elemen */
+    padding: 10px; /* Memberikan padding pada setiap item */
+    border-bottom: 1px solid #e9ecef; /* Garis pemisah antar item */
+  }
+
+  /* Menghapus garis pemisah pada item terakhir */
+  .notification-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Gambar profil dalam notifikasi */
+  .notification-item img {
+    width: 40px; /* Lebar gambar */
+    height: 40px; /* Tinggi gambar */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+  }
+
+  /* Mengatur teks pada notifikasi */
+  .notification-text {
+    flex: 1; /* Mengisi ruang yang tersisa */
+  }
+
+  /* Tombol aksi (Deny dan Allow) */
+  .notification-actions {
+    display: flex; /* Mengatur tombol menjadi fleksibel */
+    justify-content: space-between; /* Memberikan jarak antara tombol */
+    align-items: center; /* Menyelaraskan tombol secara vertikal */
+    padding: 10px; /* Memberikan padding */
+  }
+
+  /* Menambahkan jarak antar tombol aksi */
+  .notification-actions button {
+    margin: 0 5px;
+  }
+
+  /* Header notifikasi */
+  .notification-header {
+    display: flex; /* Mengatur layout header menjadi fleksibel */
+    justify-content: space-between; /* Membagi ruang antara dua elemen */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    padding: 10px; /* Memberikan padding */
+    border-bottom: 1px solid #e9ecef; /* Garis bawah header */
+  }
+
+  /* Styling untuk tombol "Mark all as read" */
+  .notification-header .mark-read {
+    color: #007bff; /* Warna biru */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+  }
+
+.bantuan-icon{
+    width: 28px;
+    height: 26px;
+}
+
+.line{
+    border-left: 2px solid #ffffff;
+    height: 46px;
+}
+
+.untuk-caleg-icon{
+    width: 28px;
+    height: 26px;
+}
+
+.profil-icon{
+    width: 28px;
+    height: 26px;
+}
+
+.container{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+
+.content{
+    display: flex;
+}
+
+.profile-card{
+    width: 263px;
+    height: 281px;
+    background-color: #ffffff;
+    border: solid 1px #a8a7a3;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.profile-image img{
+    width: 100px;
+    height: 100px;
+    border: solid 1px #535353;
+    border-radius: 50%;
+}
+
+.profile-info{
+    margin-top: 12px;
+}
+
+.profile-info h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.profile-info h2{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+}
+
+.profile-info p{
+    font-size: 14px;
+    font-weight: 300;
+    color: #535353;
+}
+
+.partai{
+    display: flex;
+    align-items: center;
+}
+
+.partai img{
+    width: 29px;
+    height: 29px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.partai p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    margin-left: 11px;
+}
+
+.middle-content{
+    margin-left: 10px;
+}
+
+.start-post{
+    width: 636px;
+    height: 155px;
+    border-radius: 12px;
+    border: solid 1px #a8a7a3;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 14px 39px 19px 30px;
+}
+
+.start-post .modal-content {
+    border-radius: 10px;
+}
+
+.start-post .modal-header {
+    border-bottom: none;
+    display: flex;
+}
+
+.start-post .modal-body svg{
+    width: 40px;
+    height: 32px;
+}
+
+.start-post .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn-file {
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+.btn-file:hover {
+    color: #000;
+}
+
+.btn-post {
+    background-color: #E53945;
+    color: white;
+}
+
+.btn-post:hover {
+    background-color: #E53945;
+    color: #fffs;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 15px 0;
+}
+
+.post-input{
+    display: flex;
+}
+
+.post-input img{
+    width: 55px;
+    height: 55px;
+    border: solid 1px #535353;
+    border-radius: 50%;
+}
+
+.post-input button{
+    margin-top: 10px;
+    width: 400px;
+    height: 36px;
+    border-radius: 18px;
+    border: solid 1px #535353;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.input-custom input{
+    width: 469px;
+    height: 47px;
+    border-radius: 20px;
+    border: solid 1px #535353;
+    background-color: #fff;
+    margin-top: 4px;
+    margin-left: 43px;
+}
+
+.post-button{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.post-button a{
+    margin-left: 16px;
+    object-fit: contain;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: #535353;
+    text-align: center;
+}
+
+.media{
+    align-items: center;
+}
+
+.media-icon{
+    width: 30px;
+    height: 30px;
+    color: #535353;
+    margin-right: 20px;
+}
+
+.event{
+    margin-left: 82px;
+    align-items: center;
+}
+
+.event-icon{
+    width: 30px;
+    height: 30px;
+    color: #535353;
+    margin-right: 20px;
+}
+
+.write{
+    margin-left: 82px;
+    align-items: center;
+}
+
+.write-icon{
+    width: 30px;
+    height: 30px;
+    color: #535353;
+    margin-right: 20px;
+}
+
+.recommended-card{
+    width: 636px;
+    height: 220px;
+    margin-top: 10px;
+    padding: 22px 30px 21px 32px;
+    border-radius: 12px;
+    border: solid 1px #a8a7a3;
+    background-color: #fff;
+}
+
+.recommended-content h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+.recommended-list{
+    margin-top: 30px;
+}
+
+.list{
+    display: flex;
+}
+
+.list a{
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    width: 280px;
+}
+
+.list img{
+    width: 55px;
+    height: 55px;
+    border: solid 1px #535353;
+    border-radius: 50%;
+}
+
+.info-list{
+    margin-left: 13px;
+}
+
+.nama h2{
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.nama p{
+    font-size: 14px;
+    color: #535353;
+    font-weight: 400;
+}
+
+.list .ikuti-button button{
+    width: 86px;
+    height: 36px;
+    border-radius: 18px;
+    border: solid 1px #ff7979;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 230px;
+}
+
+.plus-icon{
+    width: 15px;
+    height: 15px;
+    color: #e53945;
+    margin-right: 9px;
+    margin-bottom: 3px;
+}
+
+.recommended-list hr{
+    width: 100%;
+    color: #A8A7A3;
+    opacity: 60%;
+    margin-top: 20px;
+}
+
+.lihat-selengkapnya{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lihat-selengkapnya a{
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.arrow{
+    color: #000;
+    margin-left: 8px;
+}
+
+.feed-card{
+    width: 636px;
+    height: auto;
+    margin-top: 6px;
+    border-radius: 12px;
+    border: solid 1px #a8a7a3;
+    background-color: #fff;
+}
+
+.feed{
+    margin-top: 26px;
+
+}
+
+.informasi-profile{
+    margin-left: 23px;
+    display: flex;
+}
+
+.informasi-profile img{
+    width: 55px;
+    height: 55px;
+    border: solid 1px #535353;
+    border-radius: 50%;
+}
+
+.nama-profile{
+    margin-left: 13px;
+
+}
+
+.nama-profile a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.nama-profile p{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.nama-profile h2{
+    font-size: 14px;
+    font-weight: 400;
+    color: #535353;
+    margin: 0;
+}
+
+.profile{
+    display: flex;
+}
+
+.profile .ikuti-button button{
+    width: 86px;
+    height: 36px;
+    border-radius: 18px;
+    border: solid 1px #ff7979;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 190px;
+}
+
+.teks{
+    margin-top: 19px;
+    margin-left: 23px;
+    margin-right: 18px;
+}
+
+.teks p{
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+}
+
+.postingan{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.postingan img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.reaction{
+    margin-top: 15px;
+    margin-left: 23px;
+    width: 590px;
+
+}
+
+.left-icon{
+    display: flex;
+}
+
+.like{
+    display: flex;
+}
+
+.like-button {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.like-outline,
+.like-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.like-outline{
+    color: #535353;
+}
+
+.like-fill {
+    opacity: 0;
+    color: #E53945;
+}
+
+.like-button.liked .like-fill {
+    opacity: 1;
+}
+
+.like-button.liked .like-outline {
+    opacity: 0;
+}
+
+.like-number{
+    margin-left: 10px;
+}
+
+.dislike{
+    display: flex;
+    margin-left: 15px;
+}
+
+.dislike-button {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.dislike-outline,
+.dislike-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.dislike-outline{
+    color: #535353;
+}
+
+.dislike-fill {
+    opacity: 0;
+    color: #E53945;
+}
+
+.dislike-button.liked .dislike-fill {
+    opacity: 1;
+}
+
+.dislike-button.liked .dislike-outline {
+    opacity: 0;
+}
+
+.dislike-number{
+    margin-left: 10px;
+}
+
+.comment{
+    display: flex;
+    margin-left: 15px;
+}
+
+.comment-button {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.comment-outline {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+}
+
+.comment-number{
+    margin-left: 10px;
+}
+
+.tanggal p{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.reaction hr{
+    width: 100%;
+    color: #A8A7A3;
+    opacity: 60%;
+}
+
+.berita-card{
+    width: 309px;
+    height: auto;
+    border: solid 1px #a8a7a3;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
+.berita-card h1{
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 30px;
+    margin-top: 18px;
+    margin-bottom: 23px;
+}
+
+.list-berita{
+    margin-left: 30px;
+}
+
+.judul-berita{
+    margin-top: 20px;
+}
+
+.judul-berita a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+}
+
+.judul-berita a:hover{
+    color: #FFC107;
+}
+
+/* Media Query untuk layar dengan lebar maksimal 768px */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        width: 100%;
+    }
+    /* Header dan Navbar */
+    .navbar-custom {
+      padding-left: 20px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .navbar-brand img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .search-custom {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    .navlist-custom {
+      margin-left: 0;
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .navlist-custom li {
+      margin: 5px;
+      flex: 1 1 auto;
+      text-align: center;
+    }
+
+    /* Profile Card */
+    .profile-card {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      justify-content: center;
+      justify-items: center;
+    }
+
+    .profile-image img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .profile-info h1 {
+      font-size: 18px;
+    }
+
+    .profile-info h2 {
+      font-size: 14px;
+    }
+
+    /* Middle Content */
+    .middle-content {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .start-post {
+      width: 100%;
+    }
+
+    .recommended-card,
+    .feed-card {
+      width: 100%;
+    }
+
+    /* List Recommended */
+    .list a {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .list .ikuti-button button {
+      margin-left: auto;
+    }
+
+    /* Feed Card */
+    .reaction {
+      width: 100%;
+    }
+
+    /* Berita Card */
+    .berita-card {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      margin-top: 20px;
+      order: 1;
+    }
+
+    .list-berita {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .judul-berita a {
+      font-size: 12px;
+    }
+
+    /* General Styling */
+    .container {
+      flex-direction: column;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .content {
+      flex-direction: column;
+    }
+
+    .post-input img {
+      width: 45px;
+      height: 45px;
+    }
+
+    .post-input button {
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    .post-button a {
+      font-size: 14px;
+    }
+
+    .recommended-list hr {
+      margin-top: 10px;
+    }
+
+    .lihat-selengkapnya a {
+      font-size: 14px;
+    }
+  }
+
+
+
